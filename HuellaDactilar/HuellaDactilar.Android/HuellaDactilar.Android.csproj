@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3DB7000D-E595-4649-ACCF-6C23D45FBE65}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HuellaDactilar.Droid</RootNamespace>
+    <AssemblyName>HuellaDactilar.Android</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARPageRenderer.cs" />
+    <Compile Include="CryptoObjectHelper.cs" />
+    <Compile Include="FingerprintManagerApiActivity.cs" />
+    <Compile Include="FingerprintManagerApiDialogFragment.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\layout\activity_AuthenticationCallback.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SplashScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\activity_fingerprintmanager_api.axml" />
+    <AndroidResource Include="Resources\layout\activity_main.axml" />
+    <AndroidResource Include="Resources\layout\dialog_scanning_for_fingerprint.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\recyclerview_row.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HuellaDactilar\HuellaDactilar.csproj">
+      <Project>{64DAFF4D-39C1-41AE-A4B0-263732753CFE}</Project>
+      <Name>HuellaDactilar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\iconoSplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SplashScreen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_error.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_fingerprint_error.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_fingerprint_success.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_secure.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_fp_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_fp_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_fp_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimens.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\panel_authenticated.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\panel_error.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\panel_fingerprint_scan_in_progress.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\panel_initial.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
