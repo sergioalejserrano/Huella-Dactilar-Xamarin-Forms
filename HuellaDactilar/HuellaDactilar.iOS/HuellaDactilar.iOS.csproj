@@ -93,6 +93,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DependenciaServicios\DependenciaServicios.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -119,13 +120,18 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.5.0.122203</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\HuellaDactilar\HuellaDactilar.csproj">
-      <Project>{64DAFF4D-39C1-41AE-A4B0-263732753CFE}</Project>
+      <Project>{D4E2E4F4-4121-4D3C-8220-2FBE7C48CD4D}</Project>
       <Name>HuellaDactilar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependenciaServicios\" />
   </ItemGroup>
 </Project>

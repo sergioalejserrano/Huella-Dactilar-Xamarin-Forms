@@ -16,4 +16,8 @@
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="VistaModelo\" />
+    <Folder Include="Interfaz\" />
+  </ItemGroup>
 </Project>
